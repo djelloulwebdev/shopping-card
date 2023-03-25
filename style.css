@@ -1,0 +1,307 @@
+/* Start global rules */
+:root {
+   --main-color: #f7a363;
+   --light-color: rgba(0, 0, 0, 0.75);
+}
+input {
+   width: 100%;
+   padding: 14px;
+   background-color: #f2f2f2;
+   border: none;
+   letter-spacing: 0.5px;
+}
+input:focus {
+   outline: 1px solid var(--main-color);
+}
+a {
+   display: inline-block;
+   text-decoration: none;
+}
+.container {
+   padding: 0 15px;
+   margin: 0 auto;
+}
+@media (max-width: 767px) {
+   .container {
+      padding: 0;
+   }
+}
+/* small */
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+/* medium */
+@media (min-width: 992px) {
+   .container {
+      width: 980px;
+   }
+}
+/* small */
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
+}
+/* End global rules */
+/* Start processing*/
+body {
+   font-family: "Roboto", sans-serif;
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+   letter-spacing: 0.5px;
+}
+@media (max-width: 991px) {
+   body {
+      padding: 100px 0;
+   }
+}
+body .container {
+   display: flex;
+   gap: 30px;
+}
+@media (max-width: 991px) {
+   body .container {
+      flex-direction: column;
+   }
+}
+body .container > div {
+   background-color: #fafafa;
+   border-radius: 10px;
+   padding: 20px;
+}
+@media (max-width: 767px) {
+   body .container > div {
+      padding: 20px;
+   }
+}
+body .container .processing {
+   width: 55%;
+   position: relative;
+}
+@media (max-width: 991px) {
+   body .container .processing {
+      width: 100%;
+      overflow: hidden;
+   }
+}
+@media (max-width: 767px) {
+   body .container .processing {
+      width: fit-content;
+   }
+}
+body .container .processing .holder {
+   width: 55%;
+   margin: auto;
+}
+@media (max-width: 767px) {
+   body .container .processing .holder {
+      width: 100%;
+   }
+}
+body .container .processing .holder .levels span:not(.check) {
+   font-weight: 500;
+   font-size: 1.05rem;
+}
+@media (max-width: 767px) {
+   body .container .processing .holder .levels span:not(.check) {
+      font-size: 0.9rem;
+   }
+}
+body .container .processing .holder .levels span:not(.check).done {
+   color: var(--main-color);
+}
+.check {
+   position: relative;
+   margin: 20px;
+   background-color: black;
+   color: white;
+   font-size: 0.7rem;
+   display: inline-grid;
+   place-items: center;
+   width: 17px;
+   aspect-ratio: 1;
+   border-radius: 50%;
+}
+body .container .processing .holder .levels span.check:nth-of-type(2) {
+   background-image: linear-gradient(
+      to right,
+      var(--main-color) 50%,
+      black 50%
+   );
+}
+body .container .processing .holder .levels span.check:nth-of-type(2):before {
+   background-color: var(--main-color);
+}
+body .container .processing .holder .levels span.check::before,
+body .container .processing .holder .levels span.check::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 15px;
+   height: 1px;
+   background-color: black;
+}
+body .container .processing .holder .levels span.check::before {
+   left: -20px;
+}
+body .container .processing .holder .levels span.check::after {
+   right: -20px;
+}
+body .container .processing .holder form {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+body .container .processing .holder form h3 {
+   font-weight: 400;
+}
+body .container .processing .holder form label {
+   color: grey;
+   font-size: 0.95rem;
+}
+body .container .processing .holder form .group {
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+body .container .processing .holder form .group i {
+   position: absolute;
+   right: 0px;
+   display: flex;
+   justify-content: center;
+}
+body .container .processing .holder form .group input[type="submit"] {
+   background-color: black;
+   color: white;
+   border-radius: 7px;
+   width: fit-content;
+   padding: 13px 40px;
+   font-size: 0.95rem;
+}
+body .container .processing .holder form .group.log {
+   gap: 10px;
+   justify-content: flex-end;
+}
+body .container .processing .holder form .group.log a {
+   color: initial;
+   font-size: 0.85rem;
+}
+body .container .processing .holder .guest {
+   text-align: center;
+   padding: 35px;
+   margin: 90px 0 20px;
+   position: relative;
+}
+body .container .processing .holder .guest::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 170%;
+   height: 1px;
+   background-color: rgba(0, 0, 0, 0.26);
+}
+body .container .processing .holder .guest a {
+   color: white;
+   background-color: black;
+   padding: 15px 25px;
+   border-radius: 8px;
+   width: fit-content;
+   font-size: 0.85rem;
+}
+/* End processing */
+body .container .order-summary {
+   flex: 1;
+}
+@media (max-width: 991px) {
+   body .container .order-summary {
+      text-align: center;
+      width: 100%;
+   }
+}
+@media (max-width: 767px) {
+   body .container .order-summary {
+      width: initial;
+   }
+}
+body .container .order-summary h3 {
+   font-weight: 500;
+}
+body .container .order-summary img {
+   width: 100px;
+   border: 2px solid rgba(0, 0, 0, 0.74);
+   border-radius: 8px;
+}
+body .container .order-summary .details {
+   display: flex;
+   justify-content: space-between;
+}
+@media (max-width: 991px) {
+   body .container .order-summary .details {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+   }
+}
+body .container .order-summary .details .info h4 {
+   margin-bottom: 13px;
+   font-weight: 500;
+   font-size: 0.95rem;
+   color: var(--light-color);
+}
+body .container .order-summary .details .info .price {
+   position: relative;
+   font-weight: bold;
+   font-size: 1.25rem;
+}
+body .container .order-summary .details .info .price::before {
+   content: attr(currency);
+   margin-right: 5px;
+}
+body .container .order-summary .details .quantity {
+   display: flex;
+   align-items: center;
+}
+body .container .order-summary .details .quantity i {
+   background-color: white;
+   height: 27px;
+   aspect-ratio: 1;
+   display: grid;
+   place-items: center;
+   border: 1px solid;
+   border-radius: 5px;
+   font-size: 0.8rem;
+   cursor: pointer;
+}
+body .container .order-summary .details .quantity .number {
+   margin: 0 10px;
+}
+body .container .order-summary ul {
+   list-style: none;
+   padding: 0;
+   margin: 120px 0 0;
+}
+body .container .order-summary ul li {
+   display: flex;
+   justify-content: space-between;
+   padding: 13px 0;
+   color: var(--light-color);
+   position: relative;
+}
+body .container .order-summary ul span::before {
+   content: attr(currency);
+   margin-right: 5px;
+}
+body .container .order-summary ul span.free {
+   color: var(--main-color);
+   font-weight: 500;
+}
+body .container .order-summary ul li.total {
+   color: initial;
+   font-weight: bold;
+}

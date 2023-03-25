@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="all.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <div class="container">
+         <div class="processing">
+            <div class="holder">
+               <div class="levels">
+                  <span class="done">Account</span>
+                  <span class="check">
+                     <i class="fas fa-check"></i>
+                  </span>
+                  <span>Shipping</span>
+                  <span class="check">
+                     <i class="fas fa-check"></i>
+                  </span>
+                  <span>Payment</span>
+               </div>
+               <form action="">
+                  <h3>Account details</h3>
+                  <label for="email">Email address</label>
+                  <div class="group">
+                     <input
+                        type="email"
+                        name="usermail"
+                        id="email"
+                        placeholder="Your Email"
+                        value="Email@myemail.com"
+                     />
+                     <i class="fas fa-check check"></i>
+                  </div>
+                  <label for="password">Password</label>
+                  <div class="group">
+                     <input
+                        type="password"
+                        name="userpassword"
+                        id="password"
+                        placeholder="Your Password"
+                        value="123456"
+                     />
+                     <i class="fas fa-check check"></i>
+                  </div>
+                  <div class="group log">
+                     <a href="">Register for account?</a>
+                     <input type="submit" value="Login" />
+                  </div>
+               </form>
+               <div class="guest">
+                  <a href="">Continue as a guest</a>
+               </div>
+            </div>
+         </div>
+         <div class="order-summary">
+            <h3>Order Summary</h3>
+            <img src="blank-g2ba72b166_1920.png" alt="product" />
+            <div class="details">
+               <div class="info">
+                  <h4>Zumba forever cargo Sweatpants</h4>
+                  <div class="price" currency="EGP">320.45</div>
+               </div>
+               <div class="quantity">
+                  <i class="fa fa-minus"></i>
+                  <div class="number">1</div>
+                  <i class="fas fa-plus"></i>
+               </div>
+            </div>
+            <ul>
+               <li>
+                  <span>Sub total</span
+                  ><span class="price" currency="EGP">316.55</span>
+               </li>
+               <li>
+                  <span>Tax</span><span class="price" currency="EGP">3.45</span>
+               </li>
+               <li>
+                  <span>Shipping</span><span class="price free">Free</span>
+               </li>
+               <li class="total">
+                  <span>Total</span
+                  ><span class="price" currency="EGP">320.45</span>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </body>
+</html>
